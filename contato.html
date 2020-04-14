@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <title>Contato</title>
+        <link rel="stylesheet" href="css/EstiloAluno.css">
+    </head>
+</head>
+
+<body>
+    <header>
+        Desenvolvimento Web I
+    </header>
+
+    <center>
+        <a href="index.html" class="botao">Index</a>
+        <a href="aluno1.html" class="botao">Aluno 1</a>
+        <a href="aluno2.html" class="botao">Aluno 2</a>
+        <a href="aluno3.html" class="botao">Aluno 3</a>
+        <a href="contato.html" class="botao">Contato</a>
+    </center>
+    <hr>
+    <div id="estrutura">
+        <section>
+            <form method="POST" action="cadastro.html" onsubmit="return enviarDados();">
+                <fieldset>
+                <table>
+                    <tr>
+                        <td>Nome: </td>
+                        <td><input type="text" name="nome" id="nome"></td>
+                    </tr>
+                    <tr>
+                        <td>CPF: </td>
+                        <td><input type="text" name="cpf" id="cpf"></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone: </td>
+                        <td><input type="tel" name="telefone" id="telefone"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail: </td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Enviar Dados"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            </form>
+
+            <script>
+                function enviarDados() {
+                    var nome = document.getElementById("nome").value;
+                    var cpf = document.getElementById("cpf").value;
+                    var telefone = document.getElementById("telefone").value;
+                    var email = document.getElementById("email").value;
+
+
+                    if (nome.length < 6 || nome.length > 30)
+                        alert('Tamanho do nome invalido!');
+                    else {
+                        if (cpf <= 0)
+                            alert('CPF invalido!');
+                        else {
+                            if (telefone <= 0)
+                                alert('Telefone invalido!');
+                            else {
+                                if (email <= 0)
+                                    alert('Email invalida');
+                                else {
+                                    alert('Cadastro realizado com sucesso\nNome: ' + nome + '\nCPF: ' + cpf + '\nTelefone: ' + telefone + '\nE-mail: ' + email);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            </script>
+        </section>
+    </div>
+    <hr>
+    <footer>
+        <b>Desenvolvido por:</b> <br><br>
+             Jhonathan Novakosk  -  Reinaldo Ribeiro Junior - Vinícius Gustavo Bicalho  <br><br>
+            <b>Curitiba/PR - 2020.</b><br>
+        </footer>
+</body>
+
+</html>
